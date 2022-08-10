@@ -29,7 +29,7 @@ type:
 
 ### Inspired by
 
-* basic approach
+* Basic approach
 
 https://betterprogramming.pub/react-navigation-5-stack-tab-drawer-all-in-one-ead723188056
 
