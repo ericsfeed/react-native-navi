@@ -1,3 +1,19 @@
+This repo attempts to create a fairly robust example of app navigation. This is not yet complete but pushing it up as a starting point.
+
+This example includes
+* drawer navigation with icons at top level
+* tab navigatation for the home page 
+* stack navigation for a contact list 
+* an example of cross page navigation
+
+## Libaries in Use
+
+* React Native
+* Typescript
+* Expo
+
+Native Base is included but is not used. 
+
 ## Getting Started
 
 clone the repo into a directory, 
@@ -7,13 +23,6 @@ type:
 
 ## what is changed
 
-This repo attempts to create a fairly robust example of app navigation. This is not yet complete but pushing it up as a starting point.
-
-This example includes
-* drawer navigation with icons at top level
-* tab navigatation for the home page 
-* stack navigation for a contact list 
-* an example of cross page navigation
 
 uses typescript. 
 
