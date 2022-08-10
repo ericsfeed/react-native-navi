@@ -18,6 +18,11 @@ Please note,  this version of the repo is **not suitable** for use as a template
 
 Native Base is included but is not used. 
 
+
+### Demonstration - Try it out
+
+[Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
+
 ### Getting Started
 
 clone the repo into a directory, 
