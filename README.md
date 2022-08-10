@@ -21,10 +21,14 @@ Native Base is included but is not used.
 ### Getting Started
 
 clone the repo into a directory, 
+
 cd to the directory
+
 type:
-% npm install
-% expo start
+
+% `npm install`
+
+% `expo start`
 
 
 ### Inspired by
