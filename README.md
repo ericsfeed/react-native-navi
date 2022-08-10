@@ -41,3 +41,8 @@ Most examples I saw failed to document how to setup the types for typescript, bu
 
 * https://benjaminwoojang.medium.com/react-navigation-with-typescript-270dfa8d5cad
 
+### Testing
+
+This was tested using Expo on iphone SE, Android, and web.  No attempt was made to deploy the code aside from using Expo.
+
+
