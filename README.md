@@ -1,3 +1,5 @@
+## What is React Native Navi? 
+
 This repository attempts to create a fairly robust example of app navigation. This is not yet complete but pushing it up as a starting point.
 
 This example includes
@@ -8,7 +10,7 @@ This example includes
 
 Please note,  this version of the repo is not suitable for use as a template.  
 
-## Libaries in Use
+### Libaries in Use
 
 * React Native
 * Typescript
@@ -16,7 +18,7 @@ Please note,  this version of the repo is not suitable for use as a template.
 
 Native Base is included but is not used. 
 
-## Getting Started
+### Getting Started
 
 clone the repo into a directory, 
 cd to the directory
@@ -24,14 +26,8 @@ type:
 % npm install
 % expo start
 
-## what is changed
 
-
-uses typescript. 
-
-I will probably keep iterating on this until the styles and logic are improved. 
-
-## Inspired by
+### Inspired by
 
 * basic approach
 
