@@ -17,7 +17,7 @@ const Drawer = createDrawerNavigator()
 const RootNavigator = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home"
+      <Drawer.Navigator initialRouteName="Magnetic"
        screenOptions={(navigation) => ({
          drawerItemStyle: {
             borderRadius: 0,
@@ -28,9 +28,9 @@ const RootNavigator = () => {
       )
       }  
       >
-        <Drawer.Screen name="Home" component={BottomTabs} 
+        <Drawer.Screen name="Magnetic" component={BottomTabs} 
         options={{
-          title: 'Home',
+          title: 'AppNameHere',
           drawerIcon: ({focused, size}) => (
              <Ionicons
                 name="md-home"

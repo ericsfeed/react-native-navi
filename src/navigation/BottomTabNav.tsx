@@ -6,10 +6,9 @@ import { BottomTabNavigatorParamList } from './types';
 import HomeScreen from '../screens/HomeScreen';
 import ContactStack from "./ContactStack";
 import SettingsScreen from '../screens/SettingsScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 import { AntDesign } from '@expo/vector-icons';
-import Ionicons from '@expo/vector-icons/Ionicons';
-
 
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
@@ -21,7 +20,7 @@ const BottomTabs = () => {
 
       <Tab.Screen name="Home" component={HomeScreen} 
        options={{
-        tabBarLabel: 'Dashboard',
+        tabBarLabel: 'Home',
         tabBarIcon: ({ color, size }) => (
           <AntDesign name="home" size={size} color={color} />
         )
@@ -35,19 +34,28 @@ const BottomTabs = () => {
           <AntDesign name="contacts" size={size} color={color} />
         )
       }}
-       />
+      />
 
-      <Tab.Screen name="Settings" component={SettingsScreen} 
-
-options={{
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ color, size }) => (
-    <AntDesign name="setting" size={size} color={color} />
-  )
-}}
-
+<Tab.Screen name="Profile" component={ProfileScreen} 
+      options={{
+        tabBarLabel: 'Profile',
+        tabBarIcon: ({ color, size }) => (
+          <AntDesign name="user" size={size} color={color} />
+        )
+      }}
 
       />
+
+<Tab.Screen name="Settings" component={SettingsScreen} 
+      options={{
+        tabBarLabel: 'Settings',
+        tabBarIcon: ({ color, size }) => (
+          <AntDesign name="setting" size={size} color={color} />
+        )
+      }}
+      />
+
+      
     </Tab.Navigator>
   );
 };

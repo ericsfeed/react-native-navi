@@ -17,7 +17,7 @@ export type ContactStackNavigatorParamList = {
 };
 
 export type DrawerNavigatorParamList = {
-  Home : undefined;
+  Magnetic : undefined;
   Notifications: undefined;
   Contacts: undefined;
   Settings: undefined;
@@ -26,6 +26,7 @@ export type DrawerNavigatorParamList = {
 export type BottomTabNavigatorParamList = {
   Home: undefined;
   Contacts: ContactStackNavigatorParamList;
+  Profile: undefined;
   Settings: undefined;
 };
 
