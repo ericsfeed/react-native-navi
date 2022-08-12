@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 
 const NotifyScreen = () => {
   return (
-    <View style={{ flex: 1, paddingTop: 12, paddingHorizontal: 10 }}>
+    <View style={{ flex: 1, backgroundColor: '#F2F1D1', paddingTop: 12, paddingHorizontal: 10 }}>
       <Text style={{ fontSize: 18 }}>This is the Notifications screen.</Text>
     </View>
   );

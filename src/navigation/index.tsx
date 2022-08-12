@@ -1,33 +1,37 @@
 import * as React from 'react';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
 
 import BottomTabs from "./BottomTabNav";
 import NotifyScreen from "../screens/NotifyScreen";
 import ContactStack from './ContactStack';
 import SettingsScreen from '../screens/SettingsScreen';
 
+// TODO - move to a single source for the icons
 import { AntDesign } from '@expo/vector-icons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
+// navigation will use the device color theme until light dark switch is inplemented. 
+import { useColorScheme } from 'react-native';
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from '@react-navigation/native';
 
 const Drawer = createDrawerNavigator()
 
 const RootNavigator = () => {
+const scheme = useColorScheme();
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Drawer.Navigator initialRouteName="Magnetic"
        screenOptions={(navigation) => ({
          drawerItemStyle: {
             borderRadius: 0,
             width: '100%',
             marginLeft: 0
-         }
-        }
-      )
-      }  
-      >
+         }})}>
         <Drawer.Screen name="Magnetic" component={BottomTabs} 
         options={{
           title: 'AppNameHere',

@@ -61,7 +61,7 @@ const ContactScreen = () => {
   );
 };
   return (
-    <View style={{ flex: 1, paddingTop: 10 }}>
+    <View style={{ flex: 1, backgroundColor: '#E0C1D2', paddingTop: 10 }}>
     <Pressable
       onPress={() => navigation.navigate('Settings')}     // TODO - broken due to nested navigators. 
       style={{
