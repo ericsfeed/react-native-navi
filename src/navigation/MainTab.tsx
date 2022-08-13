@@ -1,33 +1,34 @@
-import * as React from 'react';
+import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BottomTabNavigatorParamList } from './types';
+import {MainTabParamList} from './types';
 
-import HomeScreen from '../screens/HomeScreen';
 import ContactStack from "./ContactStack";
-import SettingsScreen from '../screens/SettingsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+import HomeScreen from '../screens/HomeScreen';
 
 import { AntDesign } from '@expo/vector-icons';
 
-const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
-const BottomTabs = () => { 
+const MainTab = () => {
+
+  const BottomTab = createBottomTabNavigator<MainTabParamList>();
+ 
   return (
-    <Tab.Navigator screenOptions={{
-      tabBarActiveTintColor: '#e91e63',
-    }}>
-
-      <Tab.Screen name="Home" component={HomeScreen} 
-       options={{
+    <BottomTab.Navigator screenOptions={{  tabBarActiveTintColor: '#e91e63', }}>
+      <BottomTab.Screen 
+        name="Home" 
+        component={HomeScreen} 
+      options={{
         tabBarLabel: 'Home',
         tabBarIcon: ({ color, size }) => (
           <AntDesign name="home" size={size} color={color} />
         )
-      }}
-       />
-
-      <Tab.Screen name="Contacts" component={ContactStack} 
+      }}/>
+      <BottomTab.Screen 
+      name="Contacts" 
+      component={ContactStack} 
       options={{
         tabBarLabel: 'Contacts',
         tabBarIcon: ({ color, size }) => (
@@ -35,18 +36,19 @@ const BottomTabs = () => {
         )
       }}
       />
-
-<Tab.Screen name="Profile" component={ProfileScreen} 
-      options={{
+      <BottomTab.Screen 
+      name="Profile" 
+      component={ProfileScreen} 
+       options={{
         tabBarLabel: 'Profile',
         tabBarIcon: ({ color, size }) => (
           <AntDesign name="user" size={size} color={color} />
         )
       }}
-
       />
-
-<Tab.Screen name="Settings" component={SettingsScreen} 
+      <BottomTab.Screen 
+      name="Settings" 
+      component={SettingsScreen} 
       options={{
         tabBarLabel: 'Settings',
         tabBarIcon: ({ color, size }) => (
@@ -54,10 +56,11 @@ const BottomTabs = () => {
         )
       }}
       />
-
-      
-    </Tab.Navigator>
+  </BottomTab.Navigator>
   );
-};
 
-export default BottomTabs;
+}
+
+export default MainTab;
+
+

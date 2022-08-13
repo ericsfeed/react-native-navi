@@ -24,24 +24,15 @@ const ProfileScreen = () => {
   } else {
   return (
     <View style={styles.container}>
-        <Text
-          style={[ styles.text,{ fontSize: 36, fontFamily: "Creepster_400Regular" } ]}>
-          Welcome 
-          </Text>
-          <Text style={[styles.text, { fontSize: 20, fontFamily: "RobotoMono_400Regular" }]}>
-          This is the Profile screen.
-        </Text>
         <Text style={[styles.text, { fontSize: 20, fontFamily: "RobotoMono_500Medium" }]}>
         This is the Profile screen.
         </Text>
+        <Text
+          style={[ styles.text,{ fontSize: 36, fontFamily: "Creepster_400Regular" } ]}>
+          I'm So Sorry 
+          </Text>
         <Text style={[styles.text, { fontSize: 20, fontFamily: "RobotoMono_500Medium" }]}>
-          <b>This</b> is how we <i>roll</i>.
-        </Text>
-        <Text style={[styles.text, { fontSize: 36, fontFamily: "RobotoMono_400Regular" }]}>
-          Impressive!
-        </Text>
-        <Text style={[styles.text, { fontSize: 10, fontFamily: "RobotoMono_400Regular" }]}>
-          Not really!
+          Maybe next time you will contribute. 
         </Text>
     </View>
     );

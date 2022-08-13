@@ -1,12 +1,19 @@
 import type { StackNavigationProp } from '@react-navigation/stack';
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import type { DrawerNavigationProp } from '@react-navigation/drawer';
+import type { CompositeNavigationProp, RouteProp, } from '@react-navigation/native';
 
-import type {
-  CompositeNavigationProp,
-  RouteProp,
-} from '@react-navigation/native';
 
+export type RootStackParamList = { 
+  Welcome: undefined; 
+  Main: undefined; };
+
+export type MainTabParamList = { 
+  Home: undefined;
+  Notifications: undefined; 
+  Contacts: undefined; 
+  Profile: undefined; 
+  Settings: undefined; 
+};
 
 export type ContactStackNavigatorParamList = {
   Contacts: undefined;
@@ -16,26 +23,9 @@ export type ContactStackNavigatorParamList = {
   };
 };
 
-export type DrawerNavigatorParamList = {
-  Magnetic : undefined;
-  Notifications: undefined;
-  Contacts: undefined;
-  Settings: undefined;
-};
-
-export type BottomTabNavigatorParamList = {
-  Home: undefined;
-  Contacts: ContactStackNavigatorParamList;
-  Profile: undefined;
-  Settings: undefined;
-};
 
 export type ContactScreenNavigationProp = CompositeNavigationProp<
   StackNavigationProp<ContactStackNavigatorParamList, 'Contacts'>,
   BottomTabNavigationProp<BottomTabNavigatorParamList, 'Settings'>
 >;
 
-export type DetailsScreenRouteProp = RouteProp<
-  ContactStackNavigatorParamList,
-  'Details'
->;

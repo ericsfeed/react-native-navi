@@ -2,7 +2,11 @@ import { View, Text } from 'react-native';
 
 import { useRoute } from '@react-navigation/native';
 
-import { DetailsScreenRouteProp } from '../navigation/types';
+import { ContactStackNavigatorParamList } from '../navigation/types';
+
+import type { RouteProp, } from '@react-navigation/native';
+
+type DetailsScreenRouteProp = RouteProp<ContactStackNavigatorParamList, 'Details'>;
 
 const DetailScreen = () => {
   const route = useRoute<DetailsScreenRouteProp>();
