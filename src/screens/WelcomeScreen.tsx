@@ -137,24 +137,29 @@ const WelcomeScreen = () => {
   } else {
   return (
     <View style={styles.container}>
-        <Text style={[styles.text, { fontSize: 24, paddingBottom: 40, fontFamily: "RobotoMono_500Medium" }]}>
+        <Text style={[styles.text, { fontSize: 24, paddingBottom: 30, fontFamily: "RobotoMono_500Medium" }]}>
          You are here.
          </Text>
         <Text
-          style={[ styles.text,{ fontSize: 36,  paddingBottom: 40, fontFamily: "Creepster_400Regular" } ]}>
+          style={[ styles.text,{ fontSize: 36,  paddingBottom: 30, fontFamily: "Creepster_400Regular" } ]}>
           The Horror
           </Text>
-          <Text style={[styles.text, { fontSize: 28, paddingBottom: 40, fontFamily: "RobotoMono_500Medium" }]}>
+          <Text style={[styles.text, { fontSize: 28, paddingBottom: 30, fontFamily: "RobotoMono_500Medium" }]}>
          Who knows what will happen next? 
         </Text>
-        <Text>{description}. </Text>
+        <Text style={[styles.text, { fontSize: 14, paddingBottom: 10, fontFamily: "RobotoMono_500Medium" }]}>
+        {description}. </Text>
         {facialRecognitionAvailable || fingerprintAvailable || irisAvailable ? (
           <Button title="Authenticate" onPress={ authenticate} />
-        ) : null
-        }
+        ) : null}
         {resultMessage ? navigation.navigate('Main')  : null }
-        <Text>Similate a login by clicking the button. </Text>
-        <Button title="Enter" onPress={() => navigation.navigate('Main')} />
+        <Text style={[styles.text, { fontSize: 14, fontFamily: "RobotoMono_500Medium" }]}>
+          Similate a login by clicking the button. 
+          </Text>
+        <Button 
+        title="Enter" 
+        style={[styles.text, { fontSize: 24, fontFamily: "RobotoMono_500Medium" }]}
+        onPress={() => navigation.navigate('Main')} />
     </View>
   );
   }

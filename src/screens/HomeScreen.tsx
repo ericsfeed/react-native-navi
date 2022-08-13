@@ -19,12 +19,10 @@ function HomeScreen() {
   const navigation = useNavigation<DashboardScreenProp>();
 
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{flex: 1, backgroundColor: '#E0C1D2' , alignItems: 'center', justifyContent: 'center'}}>
       <Text>This is the Home screen.</Text>
       <Text>Whew! So far so good. .</Text>
-      <Button 
-        title="Logout" onPress={() => navigation.navigate('Welcome')} 
-      />
+      <Button title="Logout" onPress={() => navigation.navigate('Welcome')} />
     </View>
   );
 }
