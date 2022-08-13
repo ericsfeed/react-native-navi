@@ -21,9 +21,10 @@ function HomeScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>This is the Home screen.</Text>
+      <Text>Whew! So far so good. .</Text>
       <Button 
-      style={{padding: 10}}
-      title="Logout" onPress={() => navigation.navigate('Welcome')} />
+        title="Logout" onPress={() => navigation.navigate('Welcome')} 
+      />
     </View>
   );
 }
