@@ -62,6 +62,7 @@ const ContactScreen = () => {
 };
   return (
     <View style={{ flex: 1, backgroundColor: '#FFEEB8', paddingTop: 10 }}>
+    <FlatList data={CONTACTS} renderItem={renderListItems} />
     <Pressable
       onPress={() => navigation.navigate('Settings')}     // TODO - broken due to nested navigators. 
       style={{
@@ -75,7 +76,6 @@ const ContactScreen = () => {
     >
       <Text style={{ fontSize: 16, fontWeight: '600' }}>Go to Settings screen</Text>
     </Pressable>
-    <FlatList data={CONTACTS} renderItem={renderListItems} />
   </View>
   );
 };

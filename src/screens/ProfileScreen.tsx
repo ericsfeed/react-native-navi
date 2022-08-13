@@ -25,7 +25,7 @@ const ProfileScreen = () => {
           This is the Profile screen.
         </Text>
         <Text
-          style={[ styles.copy,{ fontSize: 36, fontFamily: "Creepster_400Regular" } ]}>
+          style={[ styles.copy, { fontSize: 36, fontFamily: "Creepster_400Regular" } ]}>
           I'm So Sorry 
           </Text>
         <Text style={styles.copy}>
