@@ -30,11 +30,13 @@ enum EResult {
 type welcomeScreenProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
 
 
+
 const WelcomeScreen = () => {
   const [appIsReady, setAppIsReady] = useState(false);
 
   const navigation = useNavigation<welcomeScreenProp>();
 
+  
   let [fontsLoaded] = useFonts({
     RobotoMono_400Regular,
     RobotoMono_500Medium,
@@ -71,6 +73,7 @@ const WelcomeScreen = () => {
 
       if (results.success) {
         setResult(EResult.SUCCESS);
+        navigation.navigate('Main')
       } else if (results.error === 'unknown') {
         setResult(EResult.DISABLED);
       } else if (
@@ -147,19 +150,20 @@ const WelcomeScreen = () => {
           <Text style={[styles.text, { fontSize: 28, paddingBottom: 30, fontFamily: "RobotoMono_500Medium" }]}>
          Who knows what will happen next? 
         </Text>
-        <Text style={[styles.text, { fontSize: 14, paddingBottom: 10, fontFamily: "RobotoMono_500Medium" }]}>
+        <Text style={[styles.text, { fontSize: 14, fontFamily: "RobotoMono_500Medium" }]}>
         {description}. </Text>
         {facialRecognitionAvailable || fingerprintAvailable || irisAvailable ? (
           <Button title="Authenticate" onPress={ authenticate} />
-        ) : null}
-        {resultMessage ? navigation.navigate('Main')  : null }
+        ) : null }
+        {resultMessage ? (  <Text> Authenticated. </Text>  ) : null }
         <Text style={[styles.text, { fontSize: 14, fontFamily: "RobotoMono_500Medium" }]}>
           Similate a login by clicking the button. 
           </Text>
         <Button 
         title="Enter" 
         style={[styles.text, { fontSize: 24, fontFamily: "RobotoMono_500Medium" }]}
-        onPress={() => navigation.navigate('Main')} />
+        onPress={() => {     navigation.navigate('Main') }}
+         />
     </View>
   );
   }
