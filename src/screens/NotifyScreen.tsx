@@ -9,4 +9,3 @@ const NotifyScreen = () => {
 };
 
 export default NotifyScreen;
-

@@ -4,7 +4,7 @@ import { useRoute } from '@react-navigation/native';
 
 import { ContactStackNavigatorParamList } from '../navigation/types';
 
-import type { RouteProp, } from '@react-navigation/native';
+import type { RouteProp } from '@react-navigation/native';
 
 type DetailsScreenRouteProp = RouteProp<ContactStackNavigatorParamList, 'Details'>;
 
@@ -22,4 +22,3 @@ const DetailScreen = () => {
 };
 
 export default DetailScreen;
-
