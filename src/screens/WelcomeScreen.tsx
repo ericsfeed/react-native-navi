@@ -160,7 +160,7 @@ const WelcomeScreen = () => {
           Similate a login by clicking the button. 
           </Text>
         <Button 
-        title="Enter" 
+        title="Sign In" 
         style={[styles.text, { fontSize: 24, fontFamily: "RobotoMono_500Medium" }]}
         onPress={() => {     navigation.navigate('Main') }}
          />

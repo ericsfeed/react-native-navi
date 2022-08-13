@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 import { Text, Button, View, Switch, StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
-  labels: {
-    fontSize: 18,
-    padding: 4,
-  },
-  buttons: {
-    fontSize: 18,
-  },
-  container: {
-    flex: 1,
-    padding: 4,
-    backgroundColor: '#EFF0ED',
-  },
-});
+import {
+  useFonts,
+  RobotoMono_500Medium,
+  RobotoMono_700Bold,
+} from "@expo-google-fonts/roboto-mono";
+
+import { Creepster_400Regular } from "@expo-google-fonts/creepster";
+
 
 const SettingsScreen = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  let [fontsLoaded] = useFonts({
+    RobotoMono_500Medium,
+    RobotoMono_700Bold,
+    Creepster_400Regular,
+  });
 
+  if (!fontsLoaded) {
+    return null;
+  } else 
   return (
     <View style={styles.container}>
       <Text style={styles.labels}>You are logged in. </Text>
@@ -41,5 +43,26 @@ const SettingsScreen = () => {
   );
 };
 
-
 export default SettingsScreen;
+
+
+const styles = StyleSheet.create({
+  labels: {
+    fontSize: 18,
+    padding: 4,
+    fontFamily: "RobotoMono_500Medium",
+  },
+  buttons: {
+    fontFamily: "RobotoMono_500Medium",
+    fontSize: 18,
+  },
+  container: {
+    flex: 1,
+    padding: 4,
+    backgroundColor: '#EFF0ED',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+  },
+});
+

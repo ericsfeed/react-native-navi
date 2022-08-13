@@ -2,18 +2,15 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import {
   useFonts,
-  RobotoMono_400Regular,
   RobotoMono_500Medium,
-  RobotoMono_500Medium_Italic,
   RobotoMono_700Bold,
-  RobotoMono_700Bold_Italic,
 } from "@expo-google-fonts/roboto-mono";
 
 import { Creepster_400Regular } from "@expo-google-fonts/creepster";
 
+
 const ProfileScreen = () => {
   let [fontsLoaded] = useFonts({
-    RobotoMono_400Regular,
     RobotoMono_500Medium,
     RobotoMono_700Bold,
     Creepster_400Regular,
@@ -24,14 +21,14 @@ const ProfileScreen = () => {
   } else {
   return (
     <View style={styles.container}>
-        <Text style={[styles.text, { fontSize: 20, fontFamily: "RobotoMono_500Medium" }]}>
-        This is the Profile screen.
+        <Text style={styles.copy}>
+          This is the Profile screen.
         </Text>
         <Text
-          style={[ styles.text,{ fontSize: 36, fontFamily: "Creepster_400Regular" } ]}>
+          style={[ styles.copy,{ fontSize: 36, fontFamily: "Creepster_400Regular" } ]}>
           I'm So Sorry 
           </Text>
-        <Text style={[styles.text, { fontSize: 20, fontFamily: "RobotoMono_500Medium" }]}>
+        <Text style={styles.copy}>
           Maybe next time you will contribute. 
         </Text>
     </View>
@@ -42,6 +39,7 @@ const ProfileScreen = () => {
 
 export default ProfileScreen;
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -49,9 +47,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  text: {
+  copy: {
     color: "black",
+    fontSize: 20, 
     paddingVertical: 10,
+    fontFamily: "RobotoMono_500Medium",
   },
 });
 
