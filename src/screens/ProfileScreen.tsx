@@ -1,5 +1,5 @@
 import { StyleSheet, View, Text } from 'react-native';
-import AppLoading from "expo-app-loading";
+
 import {
   useFonts,
   RobotoMono_400Regular,
@@ -20,7 +20,7 @@ const ProfileScreen = () => {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   } else {
   return (
     <View style={styles.container}>

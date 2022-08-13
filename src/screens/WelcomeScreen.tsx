@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-
-import AppLoading from "expo-app-loading";
 
 import {RootStackParamList} from '../navigation/types'; 
 
@@ -21,6 +19,8 @@ type welcomeScreenProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
 
 
 const WelcomeScreen = () => {
+  const [appIsReady, setAppIsReady] = useState(false);
+
   const navigation = useNavigation<welcomeScreenProp>();
 
   let [fontsLoaded] = useFonts({
@@ -31,7 +31,7 @@ const WelcomeScreen = () => {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   } else {
   return (
     <View style={styles.container}>
