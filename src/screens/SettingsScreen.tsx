@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Button, View, ScrollView, Switch, StyleSheet } from 'react-native'
+import { Text, Button, View, ScrollView, Switch, StyleSheet, Platform } from 'react-native'
 import { useFonts, RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono'
 
 const SettingsScreen = () => {
@@ -14,7 +14,7 @@ const SettingsScreen = () => {
     return null;
   } else
     return (
-      <ScrollView>
+      <ScrollView style={styles.droidSafeArea}>
         <View style={styles.page}>
 
           <Text style={styles.heading1}>Settings </Text>
@@ -106,5 +106,9 @@ const styles = StyleSheet.create({
     gap: 10,
     backgroundColor: '#EFF0ED',
     justifyContent: 'center'
-  }
+  },
+  droidSafeArea: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? 50 : 0
+  },
 });
