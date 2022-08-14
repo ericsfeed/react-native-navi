@@ -9,7 +9,6 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint . 'src/**/*.tsx' './*tsx' --ext .tsx",
-    "lint-and-fix": "eslint . 'src/**/*.tsx' './*tsx' --ext .ts .tsx --fix",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' './*tsx' --write",
     "prettier-watch": "onchange 'src/**/*.tsx' -- prettier --write {{changed}}"
   },
