@@ -158,10 +158,12 @@ const WelcomeScreen = () => {
         <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
           {resultMessage ? <Text> Authenticated. </Text> : null}
         </Text>
-        <Text style={[styles.text, {
-          fontSize: 14,
-          fontFamily: 'RobotoMono_500Medium'
-        }]}>
+        <Text style={[
+          styles.text,
+          {
+            fontSize: 14, fontFamily: 'RobotoMono_500Medium'
+          }
+        ]}>
           Similate a login by clicking the button.
         </Text>
         <Button

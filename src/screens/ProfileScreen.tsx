@@ -7,7 +7,6 @@ import { Creepster_400Regular } from '@expo-google-fonts/creepster';
 
 import { globalStyles } from '../styles/styles';
 
-
 import * as Font from 'expo-font';
 
 const myFonts = {
@@ -17,25 +16,25 @@ const myFonts = {
 };
 
 export default class ProfileScreen extends React.Component {
-
-  state = { fontsLoaded: false, };
+  state = {
+    fontsLoaded: false
+  };
 
   async _loadFontsAsync() {
     await Font.loadAsync(myFonts);
     this.setState({ fontsLoaded: true });
   }
 
-  componentDidMount() { this._loadFontsAsync(); }
+  componentDidMount() {
+    this._loadFontsAsync();
+  }
 
   render() {
     if (!this.state.fontsLoaded) {
-      return null;                    //hang without splash screen
+      return null;
     }
     return (
-      <ScrollView
-        style={globalStyles.droidSafeArea}
-        contentContainerStyle={{ flexGrow: 1 }}
-      >
+      <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
         <Text style={globalStyles.heading1}>Profile</Text>
         <View style={styles.container}>
           <Text style={styles.copy}>This is the Profile screen.</Text>
@@ -49,14 +48,13 @@ export default class ProfileScreen extends React.Component {
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: '100%',
     backgroundColor: '#F2EFC9',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   copy: {
     color: 'black',

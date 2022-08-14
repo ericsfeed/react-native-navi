@@ -60,10 +60,7 @@ const ContactScreen = () => {
     );
   };
   return (
-    <ScrollView
-      style={globalStyles.droidSafeArea}
-      contentContainerStyle={{ flexGrow: 1 }}
-    >
+    <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
       <Text style={globalStyles.heading1}>Contacts </Text>
       <View style={{ flex: 1, paddingTop: 10 }}>
         <FlatList data={CONTACTS} renderItem={renderListItems} />
