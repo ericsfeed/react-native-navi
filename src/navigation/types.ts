@@ -7,6 +7,7 @@ export type RootStackParamList = {
   Welcome: undefined; 
   Main: undefined; };
 
+  
 export type MainTabParamList = { 
   Home: undefined;
   Notifications: undefined; 
@@ -14,6 +15,7 @@ export type MainTabParamList = {
   Profile: undefined; 
   Settings: undefined; 
 };
+
 
 export type ContactStackNavigatorParamList = {
   Contacts: undefined;
@@ -26,6 +28,6 @@ export type ContactStackNavigatorParamList = {
 
 export type ContactScreenNavigationProp = CompositeNavigationProp<
   StackNavigationProp<ContactStackNavigatorParamList, 'Contacts'>,
-  BottomTabNavigationProp<BottomTabNavigatorParamList, 'Settings'>
+  BottomTabNavigationProp<MainTabParamList, 'Settings'>
 >;
 

@@ -1,12 +1,14 @@
 ## What is React Native Navi? 
 
-This repository attempts to create a fairly robust example of app navigation. This is not yet complete but pushing it up as a starting point.
+This repository demonstrates a common navigation pattern for a mobile app
 
 This example includes
-* drawer navigation with icons at top level,
-* tab navigatation for the home page,
-* stack navigation for a contact list, 
-* an example of cross page navigation.
+* authentication page first 
+* tab navigatation
+* stack navigation 
+* cross page navigation.
+* local authentication
+
 
 Please note,  this version of the repo is **not suitable** for use as a template.  
 
@@ -15,9 +17,6 @@ Please note,  this version of the repo is **not suitable** for use as a template
 * React Native
 * Typescript
 * Expo
-
-Native Base is included but is not used. 
-
 
 ### Demonstration - Try it out
 
