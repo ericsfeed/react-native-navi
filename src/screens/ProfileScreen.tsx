@@ -1,19 +1,33 @@
+import React from 'react';
+
 import { StyleSheet, View, Text } from 'react-native';
 
-import { useFonts, RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono';
-
+import { RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono';
 import { Creepster_400Regular } from '@expo-google-fonts/creepster';
 
-const ProfileScreen = () => {
-  const [fontsLoaded] = useFonts({
-    RobotoMono_500Medium,
-    RobotoMono_700Bold,
-    Creepster_400Regular
-  });
+import * as Font from 'expo-font';
 
-  if (!fontsLoaded) {
-    return null;
-  } else {
+const myFonts = {
+  RobotoMono_500Medium,
+  RobotoMono_700Bold,
+  Creepster_400Regular
+};
+
+export default class ProfileScreen extends React.Component {
+
+  state = { fontsLoaded: false, };
+
+  async _loadFontsAsync() {
+    await Font.loadAsync(myFonts);
+    this.setState({ fontsLoaded: true });
+  }
+
+  componentDidMount() { this._loadFontsAsync(); }
+
+  render() {
+    if (!this.state.fontsLoaded) {
+      return null;                    //hang without splash screen
+    }
     return (
       <View style={styles.container}>
         <Text style={styles.copy}>This is the Profile screen.</Text>
@@ -24,9 +38,8 @@ const ProfileScreen = () => {
       </View>
     );
   }
-};
+}
 
-export default ProfileScreen;
 
 const styles = StyleSheet.create({
   container: {
