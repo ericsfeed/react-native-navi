@@ -32,7 +32,10 @@ export default class ProfileScreen extends React.Component {
       return null;                    //hang without splash screen
     }
     return (
-      <ScrollView style={globalStyles.droidSafeArea}>
+      <ScrollView
+        style={globalStyles.droidSafeArea}
+        contentContainerStyle={{ flexGrow: 1 }}
+      >
         <Text style={globalStyles.heading1}>Profile</Text>
         <View style={styles.container}>
           <Text style={styles.copy}>This is the Profile screen.</Text>
@@ -50,9 +53,10 @@ export default class ProfileScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#AAE3A7',
+    height: '100%',
+    backgroundColor: '#F2EFC9',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   copy: {
     color: 'black',

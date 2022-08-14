@@ -15,7 +15,7 @@ export const globalStyles = StyleSheet.create({
   droidSafeArea: {
     flex: 1,
     paddingTop: Platform.OS === 'android' ? 50 : 0,
-    backgroundColor: '#EFF0ED',
+    backgroundColor: '#F5F8F3',
   },
 });
 

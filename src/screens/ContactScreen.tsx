@@ -60,9 +60,12 @@ const ContactScreen = () => {
     );
   };
   return (
-    <ScrollView style={globalStyles.droidSafeArea}>
+    <ScrollView
+      style={globalStyles.droidSafeArea}
+      contentContainerStyle={{ flexGrow: 1 }}
+    >
       <Text style={globalStyles.heading1}>Contacts </Text>
-      <View style={{ flex: 1, backgroundColor: '#FFEEB8', paddingTop: 10 }}>
+      <View style={{ flex: 1, paddingTop: 10 }}>
         <FlatList data={CONTACTS} renderItem={renderListItems} />
         <Pressable
           onPress={() => navigation.navigate('Settings')} // TODO - broken due to nested navigators.

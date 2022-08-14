@@ -129,39 +129,39 @@ const WelcomeScreen = () => {
         <Text
           style={[
             styles.text,
-            { fontSize: 24, paddingBottom: 30, fontFamily: 'RobotoMono_700Bold' }
+            { fontSize: 32, paddingBottom: 30, fontFamily: 'RobotoMono_700Bold' }
           ]}>
           Welcome to the Demo
         </Text>
         <Text
           style={[
             styles.text,
+            { fontSize: 42, paddingBottom: 30, fontFamily: 'Creepster_400Regular' }
+          ]}>
+          Congratulations
+        </Text>
+        <Text
+          style={[
+            styles.text,
             { fontSize: 22, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
-          ]}>
-          You are here!
-        </Text>
-        <Text
-          style={[
-            styles.text,
-            { fontSize: 36, paddingBottom: 30, fontFamily: 'Creepster_400Regular' }
-          ]}>
-          The Horror
-        </Text>
-        <Text
-          style={[
-            styles.text,
-            { fontSize: 28, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
           ]}>
           What will happen next?
         </Text>
         <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
           {description}.{' '}
         </Text>
-        {facialRecognitionAvailable || fingerprintAvailable || irisAvailable ? (
-          <Button title="Authenticate" onPress={authenticate} />
-        ) : null}
-        {resultMessage ? <Text> Authenticated. </Text> : null}
         <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
+          {facialRecognitionAvailable || fingerprintAvailable || irisAvailable ? (
+            <Button title="Authenticate" onPress={authenticate} />
+          ) : null}
+        </Text>
+        <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
+          {resultMessage ? <Text> Authenticated. </Text> : null}
+        </Text>
+        <Text style={[styles.text, {
+          fontSize: 14,
+          fontFamily: 'RobotoMono_500Medium'
+        }]}>
           Similate a login by clicking the button.
         </Text>
         <Button
@@ -181,7 +181,7 @@ export default WelcomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'cyan',
+    backgroundColor: '#C5D8AB',
     alignItems: 'center',
     justifyContent: 'center'
   },

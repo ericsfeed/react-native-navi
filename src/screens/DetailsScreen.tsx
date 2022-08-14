@@ -13,7 +13,7 @@ const DetailScreen = () => {
   const { name, birthYear } = route.params;
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#FFEEB8', paddingTop: 12, paddingHorizontal: 10 }}>
+    <View style={{ flex: 1, backgroundColor: '#FBEEC6', paddingTop: 12, paddingHorizontal: 10 }}>
       <Text style={{ fontSize: 18, paddingBottom: 24 }}>This is the Details screen.</Text>
       <Text style={{ fontSize: 18, paddingBottom: 12 }}>Name: {name}</Text>
       <Text style={{ fontSize: 18 }}>Birth Year: {birthYear}</Text>

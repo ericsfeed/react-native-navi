@@ -1,21 +1,19 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, ScrollView } from 'react-native';
-
-import { globalStyles } from '../styles/styles';
-
-import { useNavigation } from '@react-navigation/native';
+import { StyleSheet, View, Text, Button, ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 import { CompositeNavigationProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+
+import { globalStyles } from '../styles/styles';
 
 import { RootStackParamList } from '../navigation/types';
 import { MainTabParamList } from '../navigation/types';
 
 type HomeScreenProp = CompositeNavigationProp<
   StackNavigationProp<RootStackParamList, 'Main'>,
-  BottomTabNavigationProp<MainTabParamList, 'Home'>
->;
+  BottomTabNavigationProp<MainTabParamList, 'Home'>>;
 
 import { useFonts, RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono';
 
@@ -34,7 +32,11 @@ function HomeScreen() {
     return null;
   } else {
     return (
-      <ScrollView style={globalStyles.droidSafeArea}>
+
+      <ScrollView
+        style={globalStyles.droidSafeArea}
+        contentContainerStyle={{ flexGrow: 1 }}
+      >
         <Text style={globalStyles.heading1}>Home </Text>
         <View style={styles.container}>
           <Text style={styles.copy}> This is the Home screen.</Text>

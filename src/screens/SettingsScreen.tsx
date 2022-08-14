@@ -15,8 +15,13 @@ const SettingsScreen = () => {
     return null;
   } else
     return (
-      <ScrollView style={globalStyles.droidSafeArea}>
-        <View style={styles.page}>
+
+      <ScrollView
+        style={globalStyles.droidSafeArea}
+        contentContainerStyle={{ flexGrow: 1 }}>
+
+        <View style={styles.page}
+        >
           <Text style={globalStyles.heading1}>Settings </Text>
           <Text style={globalStyles.heading2}>General </Text>
 
@@ -83,16 +88,14 @@ const styles = StyleSheet.create({
   },
   fieldset: {
     flex: 1,
-    padding: 10,
     gap: 10,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    marginBottom: 10,
   },
   page: {
     flex: 1,
-    flexGrow: 1,
     gap: 10,
-    backgroundColor: '#EFF0ED',
-    justifyContent: 'center'
+    backgroundColor: '#D1E6D5',
   },
 });
