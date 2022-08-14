@@ -20,6 +20,7 @@ const SettingsScreen = () => {
           <Text style={styles.heading1}>Settings </Text>
 
           <Text style={styles.heading2}>General </Text>
+
           <View style={styles.fieldset}>
             <Text style={styles.labels}>You are logged in. </Text>
             <Button
@@ -74,12 +75,12 @@ export default SettingsScreen;
 
 const styles = StyleSheet.create({
   heading1: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: 'RobotoMono_700Bold',
     padding: 4
   },
   heading2: {
-    fontSize: 18,
+    fontSize: 20,
     fontFamily: 'RobotoMono_700Bold',
     padding: 4
   },
@@ -88,21 +89,21 @@ const styles = StyleSheet.create({
     fontFamily: 'RobotoMono_500Medium'
   },
   buttons: {
-    fontSize: 18,
+    fontSize: 17,
     fontFamily: 'RobotoMono_500Medium',
     padding: 4,
   },
   fieldset: {
     flex: 1,
-    padding: 20,
+    padding: 10,
+    gap: 10,
     justifyContent: 'center',
     alignItems: 'flex-start',
-    border: 2,
   },
   page: {
     flex: 1,
     flexGrow: 1,
-    padding: 10,
+    gap: 10,
     backgroundColor: '#EFF0ED',
     justifyContent: 'center'
   }
