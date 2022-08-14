@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Text, Button, View, ScrollView, Switch, StyleSheet, Platform } from 'react-native'
+import { Text, Button, View, ScrollView, Switch, StyleSheet } from 'react-native'
 import { useFonts, RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono'
+import { globalStyles } from '../styles/styles';
 
 const SettingsScreen = () => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -14,12 +15,10 @@ const SettingsScreen = () => {
     return null;
   } else
     return (
-      <ScrollView style={styles.droidSafeArea}>
+      <ScrollView style={globalStyles.droidSafeArea}>
         <View style={styles.page}>
-
-          <Text style={styles.heading1}>Settings </Text>
-
-          <Text style={styles.heading2}>General </Text>
+          <Text style={globalStyles.heading1}>Settings </Text>
+          <Text style={globalStyles.heading2}>General </Text>
 
           <View style={styles.fieldset}>
             <Text style={styles.labels}>You are logged in. </Text>
@@ -28,8 +27,7 @@ const SettingsScreen = () => {
               accessibilityLabel="Sign Out of the application."
             />
           </View>
-
-          <Text style={styles.heading2}>Appearance </Text>
+          <Text style={globalStyles.heading2}>Appearance </Text>
           <View style={styles.fieldset}>
             <Button
               title="Display Name"
@@ -49,7 +47,7 @@ const SettingsScreen = () => {
             />
           </View>
 
-          <Text style={styles.heading2}>Security</Text>
+          <Text style={globalStyles.heading2}>Security</Text>
           <View style={styles.fieldset}>
             <Button
               title="Email Address"
@@ -74,16 +72,6 @@ const SettingsScreen = () => {
 export default SettingsScreen;
 
 const styles = StyleSheet.create({
-  heading1: {
-    fontSize: 22,
-    fontFamily: 'RobotoMono_700Bold',
-    padding: 4
-  },
-  heading2: {
-    fontSize: 20,
-    fontFamily: 'RobotoMono_700Bold',
-    padding: 4
-  },
   labels: {
     padding: 4,
     fontFamily: 'RobotoMono_500Medium'
@@ -106,9 +94,5 @@ const styles = StyleSheet.create({
     gap: 10,
     backgroundColor: '#EFF0ED',
     justifyContent: 'center'
-  },
-  droidSafeArea: {
-    flex: 1,
-    paddingTop: Platform.OS === 'android' ? 50 : 0
   },
 });

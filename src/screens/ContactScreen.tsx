@@ -1,4 +1,6 @@
-import { StyleSheet, View, Text, Pressable, FlatList } from 'react-native';
+import { StyleSheet, View, ScrollView, Text, Pressable, FlatList } from 'react-native';
+
+import { globalStyles } from '../styles/styles';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -58,22 +60,25 @@ const ContactScreen = () => {
     );
   };
   return (
-    <View style={{ flex: 1, backgroundColor: '#FFEEB8', paddingTop: 10 }}>
-      <FlatList data={CONTACTS} renderItem={renderListItems} />
-      <Pressable
-        onPress={() => navigation.navigate('Settings')} // TODO - broken due to nested navigators.
-        style={{
-          padding: 8,
-          borderWidth: 1,
-          borderRadius: 4,
-          borderColor: 'red',
-          margin: 12,
-          alignItems: 'center'
-        }}
-      >
-        <Text style={{ fontSize: 16, fontWeight: '600' }}>Go to Settings screen</Text>
-      </Pressable>
-    </View>
+    <ScrollView style={globalStyles.droidSafeArea}>
+      <Text style={globalStyles.heading1}>Contacts </Text>
+      <View style={{ flex: 1, backgroundColor: '#FFEEB8', paddingTop: 10 }}>
+        <FlatList data={CONTACTS} renderItem={renderListItems} />
+        <Pressable
+          onPress={() => navigation.navigate('Settings')} // TODO - broken due to nested navigators.
+          style={{
+            padding: 8,
+            borderWidth: 1,
+            borderRadius: 4,
+            borderColor: 'red',
+            margin: 12,
+            alignItems: 'center'
+          }}
+        >
+          <Text style={{ fontSize: 16, fontWeight: '600' }}>Go to Settings screen</Text>
+        </Pressable>
+      </View>
+    </ScrollView>
   );
 };
 

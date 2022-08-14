@@ -1,9 +1,12 @@
 import React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, ScrollView, Text } from 'react-native';
 
 import { RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono';
 import { Creepster_400Regular } from '@expo-google-fonts/creepster';
+
+import { globalStyles } from '../styles/styles';
+
 
 import * as Font from 'expo-font';
 
@@ -29,13 +32,16 @@ export default class ProfileScreen extends React.Component {
       return null;                    //hang without splash screen
     }
     return (
-      <View style={styles.container}>
-        <Text style={styles.copy}>This is the Profile screen.</Text>
-        <Text style={[styles.copy, { fontSize: 36, fontFamily: 'Creepster_400Regular' }]}>
-          I'm So Sorry
-        </Text>
-        <Text style={styles.copy}>Maybe next time you will contribute.</Text>
-      </View>
+      <ScrollView style={globalStyles.droidSafeArea}>
+        <Text style={globalStyles.heading1}>Profile</Text>
+        <View style={styles.container}>
+          <Text style={styles.copy}>This is the Profile screen.</Text>
+          <Text style={[styles.copy, { fontSize: 36, fontFamily: 'Creepster_400Regular' }]}>
+            I'm So Sorry
+          </Text>
+          <Text style={styles.copy}>Maybe next time things will go better.</Text>
+        </View>
+      </ScrollView>
     );
   }
 }

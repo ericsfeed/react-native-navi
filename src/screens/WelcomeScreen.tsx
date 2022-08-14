@@ -129,26 +129,30 @@ const WelcomeScreen = () => {
         <Text
           style={[
             styles.text,
-            { fontSize: 24, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
-          ]}
-        >
-          You are here.
+            { fontSize: 24, paddingBottom: 30, fontFamily: 'RobotoMono_700Bold' }
+          ]}>
+          Welcome to the Demo
+        </Text>
+        <Text
+          style={[
+            styles.text,
+            { fontSize: 22, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
+          ]}>
+          You are here!
         </Text>
         <Text
           style={[
             styles.text,
             { fontSize: 36, paddingBottom: 30, fontFamily: 'Creepster_400Regular' }
-          ]}
-        >
+          ]}>
           The Horror
         </Text>
         <Text
           style={[
             styles.text,
             { fontSize: 28, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
-          ]}
-        >
-          Who knows what will happen next?
+          ]}>
+          What will happen next?
         </Text>
         <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
           {description}.{' '}

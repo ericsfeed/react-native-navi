@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, ScrollView } from 'react-native';
+
+import { globalStyles } from '../styles/styles';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -32,11 +34,14 @@ function HomeScreen() {
     return null;
   } else {
     return (
-      <View style={styles.container}>
-        <Text style={styles.copy}> This is the Home screen.</Text>
-        <Text style={styles.copy}>Whew! So far so good. .</Text>
-        <Button title="Sign Out" onPress={() => navigation.navigate('Welcome')} />
-      </View>
+      <ScrollView style={globalStyles.droidSafeArea}>
+        <Text style={globalStyles.heading1}>Home </Text>
+        <View style={styles.container}>
+          <Text style={styles.copy}> This is the Home screen.</Text>
+          <Text style={styles.copy}>Whew! So far so good. </Text>
+          <Button title="Sign Out" onPress={() => navigation.navigate('Welcome')} />
+        </View>
+      </ScrollView>
     );
   }
 }
