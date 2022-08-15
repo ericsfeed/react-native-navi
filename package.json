@@ -25,7 +25,6 @@
     "@react-navigation/drawer": "^6.4.3",
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/stack": "^6.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
     "expo": "~45.0.0",
     "expo-app-loading": "~2.1.0",
     "expo-font": "~10.2.0",
@@ -42,6 +41,7 @@
     "react-native-web": "0.17.7"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@babel/core": "^7.12.9",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.67.6",
