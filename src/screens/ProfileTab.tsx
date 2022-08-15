@@ -2,40 +2,31 @@ import React from 'react';
 
 import { StyleSheet, View, ScrollView, Text, SafeAreaView } from 'react-native';
 
-import { RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono';
-import { Creepster_400Regular } from '@expo-google-fonts/creepster';
+import {
+  useFonts,
+  RobotoMono_500Medium,
+  RobotoMono_700Bold,
+  Creepster_400Regular
+} from '@expo-google-fonts/dev';
+
 
 import { globalStyles } from '../styles/styles';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import * as Font from 'expo-font';
+export default function ProfileScreen() {
 
-const myFonts = {
-  RobotoMono_500Medium,
-  RobotoMono_700Bold,
-  Creepster_400Regular
-};
+  const [fontsLoaded] = useFonts({
+    RobotoMono_500Medium,
+    RobotoMono_700Bold,
+    Creepster_400Regular,
+  });
 
-export default class ProfileScreen extends React.Component {
-  state = {
-    fontsLoaded: false
-  };
+  if (!fontsLoaded) {
+    return null;
+  } else {
 
-  async _loadFontsAsync() {
-    await Font.loadAsync(myFonts);
-    this.setState({ fontsLoaded: true });
-  }
-
-  componentDidMount() {
-    this._loadFontsAsync();
-  }
-
-  render() {
-    if (!this.state.fontsLoaded) {
-      return null;
-    }
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <Header />
