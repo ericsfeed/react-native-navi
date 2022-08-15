@@ -1,20 +1,53 @@
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { Pressable, Text, View, StyleSheet } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
+import Constants from 'expo-constants';
 
-const Footer = () => {
+export default function Footer() {
+    const [result, setResult] = useState(null);
+    const _handlePressButtonAsync = async () => {
+        let result = await WebBrowser.openBrowserAsync('https://example.com');
+        setResult(result);
+    };
     return (
         <View style={{
-            height: 20,
+            height: 28,
             backgroundColor: 'thistle',
             flexDirection: "row",
             justifyContent: "center"
         }}>
-            <Text style={{ fontSize: 14 }}>Terms of Service  </Text>
-            <Text style={{ fontSize: 14 }}>Privacy Policy </Text>
+            <Pressable style={styles.button} onPress={_handlePressButtonAsync} >
+                <Text style={styles.text}>Terms of Service </Text>
+            </Pressable>
+            <Pressable style={styles.button} onPress={_handlePressButtonAsync} >
+                <Text style={styles.text}>Privacy Policy</Text>
+            </Pressable>
         </View>
-    )
+    );
 }
 
-export default Footer;
+const styles = StyleSheet.create({
+    button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 4,
+        paddingHorizontal: 4,
+        borderRadius: 4,
+        elevation: 3,
+    },
+    text: {
+        fontSize: 14,
+        lineHeight: 18,
+        letterSpacing: 0.25,
+    },
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: Constants.statusBarHeight,
+        backgroundColor: '#ecf0f1',
+    },
+});
 
 
 

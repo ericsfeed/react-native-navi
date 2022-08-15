@@ -38,7 +38,8 @@
     "react-native-reanimated": "~2.8.0",
     "react-native-safe-area-context": "4.2.4",
     "react-native-screens": "~3.11.1",
-    "react-native-web": "0.17.7"
+    "react-native-web": "0.17.7",
+    "expo-web-browser": "~10.2.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.29.0",
