@@ -6,7 +6,7 @@ const Footer = () => {
             height: 20,
             backgroundColor: 'thistle',
             flexDirection: "row",
-            justifyContent: "flex-end"
+            justifyContent: "center"
         }}>
             <Text style={{ fontSize: 14 }}>Terms of Service  </Text>
             <Text style={{ fontSize: 14 }}>Privacy Policy </Text>
