@@ -20,6 +20,10 @@ Please note,  this version of the repo is **not suitable** for use as a template
 
 ### Demonstration - Try it out
 
+* Web version (no native features)
+ericfeed.github.io
+
+* Expo Snack
 [Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
 
 ### Getting Started
@@ -40,5 +44,3 @@ type:
 This was tested using Expo on iphone SE, Android, and web.  
 
 No attempt was made to deploy the code aside from using Expo.
-
-
