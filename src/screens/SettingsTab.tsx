@@ -21,25 +21,15 @@ const SettingsScreen = () => {
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
-          <View style={styles.page}>
+          <View style={styles.container}>
             <Text style={globalStyles.heading1}>Settings </Text>
-            <Text style={globalStyles.heading2}>General </Text>
             <View style={styles.fieldset}>
-              <Text style={styles.labels}>You are logged in. </Text>
-              <Button
-                title="Sign Out"
-                style={styles.buttons}
-                accessibilityLabel="Sign Out of the application."
-              />
-            </View>
-            <Text style={globalStyles.heading2}>Appearance </Text>
-            <View style={styles.fieldset}>
+              <Text style={globalStyles.heading2}>Appearance </Text>
               <Button
                 style={styles.buttons}
                 title="Display Name"
                 accessibilityLabel="SChange the display name that is visible to contacts you authorize."
               />
-
               <Button
                 style={styles.buttons}
                 title="Icon"
@@ -54,8 +44,8 @@ const SettingsScreen = () => {
               />
             </View>
 
-            <Text style={globalStyles.heading2}>Security</Text>
             <View style={styles.fieldset}>
+              <Text style={globalStyles.heading2}>Security</Text>
               <Button
                 style={styles.buttons}
                 title="Email Address"
@@ -74,6 +64,17 @@ const SettingsScreen = () => {
                 accessibilityLabel="Change the password used to secure your account."
               />
             </View>
+            <View style={styles.fieldset}>
+              <Text style={globalStyles.heading2}>General </Text>
+              <Text style={styles.labels}>You are logged in. </Text>
+              <Button
+                title="Sign Out"
+                style={styles.buttons}
+                accessibilityLabel="Sign Out of the application."
+              />
+            </View>
+
+
           </View>
         </ScrollView>
         <Footer />
@@ -84,25 +85,24 @@ const SettingsScreen = () => {
 export default SettingsScreen;
 
 const styles = StyleSheet.create({
-  labels: {
-    padding: 4,
-    fontFamily: 'RobotoMono_500Medium'
-  },
-  buttons: {
-    fontSize: 17,
-    fontFamily: 'RobotoMono_500Medium',
-    padding: 4
-  },
-  fieldset: {
-    flex: 1,
-    gap: 10,
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    marginBottom: 10
-  },
-  page: {
+  container: {
     flex: 1,
     gap: 10,
     backgroundColor: '#D1E6D5'
+  },
+  fieldset: {
+    flex: 1,
+    padding: 2,
+    gap: 10,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start'
+  },
+  labels: {
+    padding: 2,
+    fontFamily: 'RobotoMono_500Medium'
+  },
+  buttons: {
+    fontFamily: 'RobotoMono_500Medium',
+    paddingBottom: 10
   }
 });
