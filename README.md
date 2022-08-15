@@ -21,7 +21,7 @@ Please note,  this version of the repo is **not suitable** for use as a template
 ### Demonstration - Try it out
 
 * Web version (no native features)
-[Click here to open the website](https://ericfeed.github.io)
+[Click here to open the website](https://ericsfeed.github.io)
 
 * Expo Snack
 [Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
