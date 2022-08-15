@@ -1,9 +1,9 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
+// to see the header, change the height and add a text component inside the view
 const Header = () => {
     return (
-        <View style={{ height: 18, backgroundColor: 'thistle' }}>
-            <Text style={{ fontSize: 14 }}> Example Header </Text>
+        <View style={{ height: 0 }}>
         </View>
     )
 }

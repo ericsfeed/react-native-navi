@@ -13,10 +13,14 @@ const ContactStackNavigator = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Contact Screen"
-        component={ContactTab}
         options={{ headerShown: false }}
+        component={ContactTab}
       />
-      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen
+        name="Details"
+        options={{ headerShown: false }}
+        component={DetailsScreen}
+      />
     </Stack.Navigator>
   );
 };
