@@ -164,7 +164,7 @@ const WelcomeScreen = () => {
             fontSize: 14, fontFamily: 'RobotoMono_500Medium'
           }
         ]}>
-          Similate a login by clicking the button.
+          Similate a login by clicking the button!
         </Text>
         <Button
           title="Sign In"
