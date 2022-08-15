@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import ContactScreen from '../screens/ContactScreen';
+import ContactTab from '../screens/ContactTab';
 import DetailsScreen from '../screens/DetailsScreen';
 
 const Stack = createStackNavigator();
@@ -13,7 +13,7 @@ const ContactStackNavigator = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Contact Screen"
-        component={ContactScreen}
+        component={ContactTab}
         options={{ headerShown: false }}
       />
       <Stack.Screen name="Details" component={DetailsScreen} />

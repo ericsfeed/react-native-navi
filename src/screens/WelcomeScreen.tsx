@@ -1,11 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, ScrollView, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
+
 
 import * as LocalAuthentication from 'expo-local-authentication';
 
 import { RootStackParamList } from '../navigation/types';
+import { globalStyles } from '../styles/styles';
+
+import Footer from '../components/Footer';
+
 
 import {
   useFonts,
@@ -125,55 +130,61 @@ const WelcomeScreen = () => {
     return null;
   } else {
     return (
-      <View style={styles.container}>
-        <Text
-          style={[
-            styles.text,
-            { fontSize: 32, paddingBottom: 30, fontFamily: 'RobotoMono_700Bold' }
-          ]}>
-          Welcome to the Demo
-        </Text>
-        <Text
-          style={[
-            styles.text,
-            { fontSize: 42, paddingBottom: 30, fontFamily: 'Creepster_400Regular' }
-          ]}>
-          Congratulations
-        </Text>
-        <Text
-          style={[
-            styles.text,
-            { fontSize: 22, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
-          ]}>
-          What will happen next?
-        </Text>
-        <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
-          {description}.{' '}
-        </Text>
-        <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
-          {facialRecognitionAvailable || fingerprintAvailable || irisAvailable ? (
-            <Button title="Authenticate" onPress={authenticate} />
-          ) : null}
-        </Text>
-        <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
-          {resultMessage ? <Text> Authenticated. </Text> : null}
-        </Text>
-        <Text style={[
-          styles.text,
-          {
-            fontSize: 14, fontFamily: 'RobotoMono_500Medium'
-          }
-        ]}>
-          Similate a login by clicking the button!
-        </Text>
-        <Button
-          title="Sign In"
-          style={[styles.text, { fontSize: 24, fontFamily: 'RobotoMono_500Medium' }]}
-          onPress={() => {
-            navigation.navigate('Main');
-          }}
-        />
-      </View>
+      <SafeAreaView style={{ flex: 1 }}>
+        <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
+
+          <View style={styles.container}>
+            <Text
+              style={[
+                styles.text,
+                { fontSize: 32, paddingBottom: 30, fontFamily: 'RobotoMono_700Bold' }
+              ]}>
+              Welcome to the Demo
+            </Text>
+            <Text
+              style={[
+                styles.text,
+                { fontSize: 42, paddingBottom: 30, fontFamily: 'Creepster_400Regular' }
+              ]}>
+              Congratulations
+            </Text>
+            <Text
+              style={[
+                styles.text,
+                { fontSize: 22, paddingBottom: 30, fontFamily: 'RobotoMono_500Medium' }
+              ]}>
+              What will happen next?
+            </Text>
+            <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
+              {description}.{' '}
+            </Text>
+            <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
+              {facialRecognitionAvailable || fingerprintAvailable || irisAvailable ? (
+                <Button title="Authenticate" onPress={authenticate} />
+              ) : null}
+            </Text>
+            <Text style={[styles.text, { fontSize: 14, fontFamily: 'RobotoMono_500Medium' }]}>
+              {resultMessage ? <Text> Authenticated. </Text> : null}
+            </Text>
+            <Text style={[
+              styles.text,
+              {
+                fontSize: 14, fontFamily: 'RobotoMono_500Medium'
+              }
+            ]}>
+              Similate a login by clicking the button!
+            </Text>
+            <Button
+              title="Sign In"
+              style={[styles.text, { fontSize: 24, fontFamily: 'RobotoMono_500Medium' }]}
+              onPress={() => {
+                navigation.navigate('Main');
+              }}
+            />
+          </View>
+        </ScrollView>
+        <Footer />
+      </SafeAreaView>
     );
   }
 };

@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { StyleSheet, View, ScrollView, Text } from 'react-native';
+import { StyleSheet, View, ScrollView, Text, SafeAreaView } from 'react-native';
 
 import { RobotoMono_500Medium, RobotoMono_700Bold } from '@expo-google-fonts/roboto-mono';
 import { Creepster_400Regular } from '@expo-google-fonts/creepster';
 
 import { globalStyles } from '../styles/styles';
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import * as Font from 'expo-font';
 
@@ -34,16 +37,20 @@ export default class ProfileScreen extends React.Component {
       return null;
     }
     return (
-      <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
-        <Text style={globalStyles.heading1}>Profile</Text>
-        <View style={styles.container}>
-          <Text style={styles.copy}>This is the Profile screen.</Text>
-          <Text style={[styles.copy, { fontSize: 36, fontFamily: 'Creepster_400Regular' }]}>
-            I'm So Sorry
-          </Text>
-          <Text style={styles.copy}>Maybe next time things will go better.</Text>
-        </View>
-      </ScrollView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Header />
+        <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flex: 10 }}>
+          <Text style={globalStyles.heading1}>Profile</Text>
+          <View style={styles.container}>
+            <Text style={styles.copy}>This is the Profile screen.</Text>
+            <Text style={[styles.copy, { fontSize: 36, fontFamily: 'Creepster_400Regular' }]}>
+              I'm So Sorry
+            </Text>
+            <Text style={styles.copy}>Maybe next time things will go better.</Text>
+          </View>
+        </ScrollView>
+        <Footer />
+      </SafeAreaView>
     );
   }
 }
@@ -58,7 +65,7 @@ const styles = StyleSheet.create({
   },
   copy: {
     color: 'black',
-    fontSize: 20,
+    fontSize: 18,
     paddingVertical: 10,
     fontFamily: 'RobotoMono_500Medium'
   }

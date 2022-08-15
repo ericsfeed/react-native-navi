@@ -2,8 +2,8 @@ import { StyleSheet, Platform } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
   heading1: {
-    fontSize: 22,
-    fontFamily: 'RobotoMono_700Bold',
+    fontSize: 20,
+    fontFamily: 'RobotoMono_500Medium',
     padding: 4,
     alignSelf: 'center',
   },

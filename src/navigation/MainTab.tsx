@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MainTabParamList } from './types';
 
 import ContactStack from './ContactStack';
-import ProfileScreen from '../screens/ProfileScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import HomeScreen from '../screens/HomeScreen';
+import ProfileTab from '../screens/ProfileTab';
+import SettingsTab from '../screens/SettingsTab';
+import HomeTab from '../screens/HomeTab';
 
 import { AntDesign } from '@expo/vector-icons';
 
@@ -17,7 +17,7 @@ const MainTab = () => {
     <BottomTab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: '#e91e63' }}>
       <BottomTab.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeTab}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => <AntDesign name="home" size={size} color={color} />
@@ -33,7 +33,7 @@ const MainTab = () => {
       />
       <BottomTab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={ProfileTab}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => <AntDesign name="user" size={size} color={color} />
@@ -41,7 +41,7 @@ const MainTab = () => {
       />
       <BottomTab.Screen
         name="Settings"
-        component={SettingsScreen}
+        component={SettingsTab}
         options={{
           tabBarLabel: 'Settings',
           tabBarIcon: ({ color, size }) => <AntDesign name="setting" size={size} color={color} />

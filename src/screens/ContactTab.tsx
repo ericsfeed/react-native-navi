@@ -1,10 +1,11 @@
-import { StyleSheet, View, ScrollView, Text, Pressable, FlatList } from 'react-native';
+import { StyleSheet, View, Text, Pressable, FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { globalStyles } from '../styles/styles';
-
-import { useNavigation } from '@react-navigation/native';
-
 import { ContactScreenNavigationProp } from '../navigation/types';
+
+import Footer from '../components/Footer';
 
 const CONTACTS = [
   {
@@ -60,9 +61,9 @@ const ContactScreen = () => {
     );
   };
   return (
-    <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
-      <Text style={globalStyles.heading1}>Contacts </Text>
-      <View style={{ flex: 1, paddingTop: 10 }}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
+        <Text style={globalStyles.heading1}>Contacts </Text>
         <FlatList data={CONTACTS} renderItem={renderListItems} />
         <Pressable
           onPress={() => navigation.navigate('Settings')} // TODO - broken due to nested navigators.
@@ -78,7 +79,8 @@ const ContactScreen = () => {
           <Text style={{ fontSize: 16, fontWeight: '600' }}>Go to Settings screen</Text>
         </Pressable>
       </View>
-    </ScrollView>
+      <Footer />
+    </SafeAreaView>
   );
 };
 

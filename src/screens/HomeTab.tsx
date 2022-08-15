@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, Button, ScrollView, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { CompositeNavigationProp } from '@react-navigation/native';
@@ -10,6 +10,10 @@ import { globalStyles } from '../styles/styles';
 
 import { RootStackParamList } from '../navigation/types';
 import { MainTabParamList } from '../navigation/types';
+
+
+import Footer from '../components/Footer';
+
 
 type HomeScreenProp = CompositeNavigationProp<
   StackNavigationProp<RootStackParamList, 'Main'>,
@@ -33,14 +37,17 @@ function HomeScreen() {
     return null;
   } else {
     return (
-      <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
-        <Text style={globalStyles.heading1}>Home</Text>
-        <View style={styles.container}>
-          <Text style={styles.copy}> This is the Home screen.</Text>
-          <Text style={styles.copy}>Whew! So far so good. </Text>
-          <Button title="Sign Out" onPress={() => navigation.navigate('Welcome')} />
-        </View>
-      </ScrollView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <ScrollView style={globalStyles.droidSafeArea} contentContainerStyle={{ flexGrow: 1 }}>
+          <Text style={globalStyles.heading1}>Home</Text>
+          <View style={styles.container}>
+            <Text style={styles.copy}> This is the Home screen.</Text>
+            <Text style={styles.copy}>Whew! So far so good. </Text>
+            <Button title="Sign Out" onPress={() => navigation.navigate('Welcome')} />
+          </View>
+        </ScrollView>
+        <Footer />
+      </SafeAreaView>
     );
   }
 }
