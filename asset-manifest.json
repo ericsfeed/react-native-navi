@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/react-native-navi/static/js/app.1b84ad7f.chunk.js",
-    "app.js.map": "/react-native-navi/static/js/app.1b84ad7f.chunk.js.map",
+    "app.js": "/react-native-navi/static/js/app.877a811f.chunk.js",
+    "app.js.map": "/react-native-navi/static/js/app.877a811f.chunk.js.map",
     "runtime~app.js": "/react-native-navi/static/js/runtime~app.add50e48.js",
     "runtime~app.js.map": "/react-native-navi/static/js/runtime~app.add50e48.js.map",
-    "static/js/2.5c1626f8.chunk.js": "/react-native-navi/static/js/2.5c1626f8.chunk.js",
-    "static/js/2.5c1626f8.chunk.js.map": "/react-native-navi/static/js/2.5c1626f8.chunk.js.map",
+    "static/js/2.164da2bd.chunk.js": "/react-native-navi/static/js/2.164da2bd.chunk.js",
+    "static/js/2.164da2bd.chunk.js.map": "/react-native-navi/static/js/2.164da2bd.chunk.js.map",
     "fonts/AntDesign.ttf": "/react-native-navi/./fonts/AntDesign.ttf",
     "fonts/Creepster_400Regular.ttf": "/react-native-navi/./fonts/Creepster_400Regular.ttf",
     "fonts/Entypo.ttf": "/react-native-navi/./fonts/Entypo.ttf",
@@ -39,11 +39,11 @@
     "index.html": "/react-native-navi/index.html",
     "manifest.json": "/react-native-navi/manifest.json",
     "serve.json": "/react-native-navi/serve.json",
-    "static/js/2.5c1626f8.chunk.js.LICENSE.txt": "/react-native-navi/static/js/2.5c1626f8.chunk.js.LICENSE.txt"
+    "static/js/2.164da2bd.chunk.js.LICENSE.txt": "/react-native-navi/static/js/2.164da2bd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.add50e48.js",
-    "static/js/2.5c1626f8.chunk.js",
-    "static/js/app.1b84ad7f.chunk.js"
+    "static/js/2.164da2bd.chunk.js",
+    "static/js/app.877a811f.chunk.js"
   ]
 }
