@@ -1,13 +1,13 @@
 ## What is React Native Navi? 
 
-This repository demonstrates a common navigation pattern for a mobile app
+Demonstration of react-native-navigation - some basic mobile app navigation example. 
 
 This example includes
-* authentication page first 
-* tab navigatation
-* stack navigation 
-* cross page navigation.
-* local authentication
+* authentication page first  
+* tab navigatation - @react-navigation/bottom-tabs  
+* stack navigationp -  @react-navigation/stack
+* local authentication - expo-local-authentication
+* pick an image from device library or camera
 
 
 Please note,  this version of the repo is **not suitable** for use as a template.  
