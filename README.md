@@ -3,11 +3,11 @@
 Demonstration of react-native-navigation - some basic mobile app navigation example. 
 
 This example includes
-* authentication page first  
 * tab navigatation - @react-navigation/bottom-tabs  
 * stack navigationp -  @react-navigation/stack
 * local authentication - expo-local-authentication
-* pick an image from device library or camera
+* pick an image from device library or camera - expo-image-picker
+
 
 
 Please note,  this version of the repo is **not suitable** for use as a template.  
@@ -21,7 +21,7 @@ Please note,  this version of the repo is **not suitable** for use as a template
 ### Demonstration - Try it out
 
 * Web version (no native features)
-[Click here to open the website](https://ericsfeed.github.io)
+[Click here to open the website](https://ericsfeed.github.io/react-native-navi)
 
 * Expo Snack
 [Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
