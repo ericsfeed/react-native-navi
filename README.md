@@ -5,12 +5,12 @@ Demonstration of react-native-navigation - some basic mobile app navigation exam
 This example includes
 * tab navigatation - @react-navigation/bottom-tabs  
 * stack navigationp -  @react-navigation/stack
-* local authentication - expo-local-authentication
+* expo local authentication - expo-local-authentication
 * pick an image from device library or camera - expo-image-picker
+* fonts - "@expo-google-fonts
 
 
-
-Please note,  this version of the repo is **not suitable** for use as a template.  
+Please note,  this version of the repo is **not suitable** for use as a template.  Additional work is required to make it operational. 
 
 ### Libaries in Use
 
