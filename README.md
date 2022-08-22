@@ -20,11 +20,18 @@ Please note,  this version of the repo is **not suitable** for use as a template
 
 ### Demonstration - Try it out
 
-* Web version (no native features)
+1.
+Web version (no native features)
 [Click here to open the website](https://ericsfeed.github.io/react-native-navi)
 
-* Expo Snack
+2. 
+Expo Snack
 [Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
+
+3. Using Expo - download Expo Go from the app store, and then use this QR CODE to run the app.
+
+![expo qr code](assets/qrcodeAug21.png)
+
 
 ### Getting Started
 
