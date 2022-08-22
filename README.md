@@ -28,7 +28,7 @@ Web version (no native features)
 Expo Snack
 [Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
 
-3. Using Expo - download Expo Go from the app store, and then use this QR CODE to run the app.
+3. Using Expo - download Expo Go from the app store, and then use this QR CODE to run the app.  This method will allow using native features like local authentication and photo upload. 
 
 ![expo qr code](assets/qrcodeAug21.png)
 
