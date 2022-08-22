@@ -20,15 +20,17 @@ Please note,  this version of the repo is **not suitable** for use as a template
 
 ### Demonstration - Try it out
 
-1.
+1. See it on the web
 Web version (no native features)
 [Click here to open the website](https://ericsfeed.github.io/react-native-navi)
 
-2. 
+2. See it in online code editor
 Expo Snack
 [Click here to open the snack](https://snack.expo.dev/@dotterpop1/github.com-ericsfeed-react-native-navi?platform=web)
 
-3. Using Expo - download Expo Go from the app store, and then use this QR CODE to run the app.  This method will allow using native features like local authentication and photo upload. 
+3. See it on your device
+
+Download 'Expo Go' from the app store, and then use this QR CODE to run the app.  This method will allow using native features like local authentication and photo upload. 
 
 ![expo qr code](assets/qrcodeAug21.png)
 
